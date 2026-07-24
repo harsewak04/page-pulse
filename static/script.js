@@ -1,12 +1,8 @@
 document.querySelector("button").addEventListener("click", async () => {
-
     const url = document.getElementById("urlInput").value;
-
     // Show loading message
     document.getElementById("results").innerHTML = "<h2>Analyzing website...</h2>";
-
     try {
-
         const response = await fetch("/analyze", {
             method: "POST",
             headers: {
@@ -16,15 +12,12 @@ document.querySelector("button").addEventListener("click", async () => {
                 url: url
             })
         });
-
         const data = await response.json();
-
         if (data.error) {
             alert(data.error);
             document.getElementById("results").innerHTML = "";
             return;
         }
-
         document.getElementById("results").innerHTML = `
             <h2>Analysis Result</h2>
 
@@ -42,14 +35,10 @@ document.querySelector("button").addEventListener("click", async () => {
 
             <p><strong>Word Count:</strong> ${data.word_count}</p>
         `;
-
     }
-
     catch (err) {
-
         alert("Something went wrong.");
         document.getElementById("results").innerHTML = "";
 
     }
-
 });

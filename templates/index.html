@@ -5,47 +5,34 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
 <div class="container">
-
 <h1>🚀 Page Pulse</h1>
-
 <p style="text-align:center; color:gray;">
     Website SEO & Page Analyzer
 </p>
-
 <input
     type="text"
     id="urlInput"
     placeholder="https://example.com">
-
 <button>Analyze</button>
-
 <hr>
-
 <div id="results">
-
     <h2>Analysis Result</h2>
-
     <p><strong>Status:</strong> <span id="status"></span></p>
-
     <p><strong>Response Time:</strong> <span id="response_time"></span></p>
-
     <p><strong>Title:</strong> <span id="title"></span></p>
-
     <p><strong>Meta Description:</strong> <span id="meta"></span></p>
-
     <p><strong>H1 Count:</strong> <span id="h1"></span></p>
-
     <p><strong>Images Missing ALT:</strong> <span id="alt"></span></p>
-
     <p><strong>Word Count:</strong> <span id="words"></span></p>
-
+    <footer style="text-align:center; margin-top:40px; color:gray; font-size:14px;">
+    Built for
+    <a href="https://digitalheroesco.com" target="_blank">
+        Digital Heroes Training Task
+    </a>
+</footer>
 </div>
-
 </div>
-
 <script src="{{ url_for('static', filename='script.js') }}"></script>
-
 </body>
 </html>
